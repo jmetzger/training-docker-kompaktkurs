@@ -25,11 +25,27 @@ docker images
 
 ## Schritt 1b: Dockerfile aufhübschen (best practice) 
 
-```
-
-
 
 ```
+FROM ubuntu:latest
+RUN apt-get update && \
+  apt-get install -y inetutils && \
+  rm -rf /var/lib/apt/lists/*
+```
+
+```
+# With comments 
+FROM ubuntu:latest
+# Better use && and new lines 
+# RUN apt-get update; apt-get install -y inetutils-ping
+RUN apt-get update && \
+  apt-get install -y inetutils && \
+  rm -rf /var/lib/apt/lists/*
+
+# is not needed, because CMD["bash"] is default in ubuntu:latest 
+# CMD ["/bin/bash"]
+```
+
 
 ## Schritt 2: Container testen 
 
