@@ -1,5 +1,8 @@
 # Ubuntu mit ping 
 
+## Schritt 1: Container bauen 
+
+
 ```
 mkdir myubuntu 
 cd myubuntu/
@@ -20,13 +23,26 @@ docker images
 # -> container läuft dann nicht mehr 
 ```
 
+## Schritt 1b: Dockerfile aufhübschen (best practice) 
+
+```
+
+
+
+```
+
+## Schritt 2: Container testen 
+
+
 ```
 docker run -d -t --name container-ubuntu myubuntu
 docker container ls
 # in den container reingehen mit dem namen des Containers: myubuntu 
 docker exec -it myubuntu bash
 ls -la
- ```
+```
+
+## Schritt 3: ping von neuem container zu altem Container 
 
 ```
 # Zweiten Container starten
