@@ -14,6 +14,7 @@ sudo usermod -aG docker $USER
 
 ## Unter SLES werden Dienste nicht automatisch aktiviert und gestartet !!! 
 # Service für start nach Boot aktivieren 
+newgrp docker 
 sudo systemctl enable docker.service
 # Docker dienst starten 
 sudo systemctl start docker.service
