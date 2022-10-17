@@ -15,6 +15,7 @@
   
   1. Docker-Befehle 
      * [Die wichtigsten Befehle](docker-befehle.md)
+     * [Die einzelnen Image-Schichten anschauen](docker-history.md) 
      * [Logs anschauen - docker logs - mit Beispiel nginx](docker-logs-nginx.md)
      * [docker run](docker-run.md)
      * [Docker container/image stoppen/löschen](container-image-delete.md)
