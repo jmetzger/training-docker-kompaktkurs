@@ -3,6 +3,10 @@
 ## Schritt 1: beispiel 
 
 ```
+# start clean
+docker images | grep ubuntu
+# eventually delete images 
+
 # ubuntu starts bash by default 
 docker run -it --name=ubuntu-customized ubuntu:latest  
 # innerhalb der shell
