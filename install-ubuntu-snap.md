@@ -15,7 +15,7 @@ systemctl status snap.docker.dockerd.service
 service snap.docker.dockerd status
 
 systemctl is-enabled snap.docker.dockerd.service 
-# Dienst aktivieren
+# Dienst aktivieren (er wird dann auch beim nächsten Boot gestartet) - Windows Autostart 
 systemctl enable snap.docker.dockerd.service 
 
 ```
