@@ -39,3 +39,16 @@ systemctl start snap.docker.dockerd.service
 systemctl is-enabled snap.docker.dockerd.service
 
 ```
+
+## Optional: Access to docker-daemon aus unprvileged user 
+
+```
+sudo addgroup --system docker
+sudo adduser $USER docker
+# lädt die neue Gruppe in den User hinein 
+newgrp docker
+sudo snap disable docker
+sudo snap enable docker
+
+
+```
