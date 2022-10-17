@@ -14,7 +14,10 @@ docker inspect nginx-server
 ## Step 2: 
 
 ```
-docker run -it --rm busybox sh
-
+# Assuming nginx-server has pod-ip 172.17.0.2 
+# connects to sh by default 
+docker run -it --rm busybox
+/ # ping 172.17.02 
+/ # wget -O - http://172.17.0.2 
 
 ```
