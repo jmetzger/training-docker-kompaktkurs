@@ -58,17 +58,18 @@
      * [Vulnerability Scanner mit snyk](https://snyk.io/plans/)
      * [Parent/Base - Image bauen für Docker](https://docs.docker.com/develop/develop-images/baseimages/)
     
-
-## Backlog 
-
   1. Linux und Docker Tipps & Tricks allgemein 
      * [Auf ubuntu root-benutzer werden](sudo.md)
      * [IP - Adresse abfragen](ip-a.md)
      * [Hostname setzen](hostname.md)
+     * [Läuft der ssh-server](ssh-running.md)
+  
+## Backlog 
+
+  1. Linux und Docker Tipps & Tricks allgemein 
      * [Proxy für Docker setzen](proxy-docker.md)
      * [vim einrückung für yaml-dateien](/vim/vim-yaml.md)
      * [YAML Linter Online](http://www.yamllint.com/)
-     * [Läuft der ssh-server](ssh-running.md)
      * [Basis/Parent - Image erstellen](docker-base-image.md)
      * [Eigenes unsichere Registry-Verwenden. ohne https](insecure-registry.md)
 
