@@ -14,8 +14,9 @@ apt update
 apt install telnet 
 exit
 
-docker images
-docker commit ubuntu-customized ubuntu:latest
+# to get container-id 
+docker container ls -a 
+docker commit -m "included telnet" ubuntu-customized ubuntu:latest
 docker images
 
 ```
