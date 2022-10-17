@@ -24,7 +24,8 @@
      * [Docker container analysieren](docker-inspect.md)
      * [Docker container in den Vordergrund bringen - attach](/docker/docker-attach.md) 
      * [Aufräumen - container und images löschen](prune-container-images.md)
-     * [Nginx mit portfreigabe laufen lassen](docker-example-nginx.md)    
+     * [Nginx mit portfreigabe laufen lassen](docker-example-nginx.md)  
+     * [docker-commit](docker-commit.md)
   
   1. Docker - Szenarien 
      * [Verbindung zu nginx mit anderem Container testen](nginx-busybox-connection-test.md) 
