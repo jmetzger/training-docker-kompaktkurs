@@ -1,10 +1,15 @@
 # Install docker (ubuntu) with snap
 
-```
+## Steps to install 
 
+```
 sudo su -
 snap install docker
+```
 
+## Optional 
+
+```
 # for information retrieval 
 snap info docker
 systemctl list-units
