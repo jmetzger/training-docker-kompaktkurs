@@ -7,12 +7,17 @@ sudo su -
 snap install docker
 ```
 
-## Step 2: Validate if service is running ? 
+## Step 2: Validate if service is running and enabled ? 
 
 ```
 systemctl status snap.docker.dockerd.service
 # oder (aber veraltet) 
 service snap.docker.dockerd status
+
+systemctl is-enabled snap.docker.dockerd.service 
+# Dienst aktivieren
+systemctl enable snap.docker.dockerd.service 
+
 ```
 
 ## Optional: Find the name of the service 
