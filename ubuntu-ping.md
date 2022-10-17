@@ -54,7 +54,7 @@ RUN apt-get update && \
 docker run -d -t --name container-ubuntu myubuntu
 docker container ls
 # in den container reingehen mit dem namen des Containers: myubuntu 
-docker exec -it myubuntu bash
+docker exec -it container-ubuntu bash
 ls -la
 ```
 
