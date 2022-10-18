@@ -1,9 +1,8 @@
 # Example 
 
 ```
- docker run -d \
-  -it \
-  --name devtest \
-  --mount type=bind,source=/srv,target=/app \
-  nginx:latest
+# andere Verzeichnis als das Heimatverzeichnis von root funktionieren aktuell nicht mit 
+# snap install docker 
+# wg. des Confinements 
+docker run -d -it  --name devtest --mount type=bind,source=/root,target=/app nginx:latest
 ```
