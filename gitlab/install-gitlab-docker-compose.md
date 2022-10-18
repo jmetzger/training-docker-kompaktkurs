@@ -28,7 +28,7 @@ services:
  
   redis:
     restart: always
-    image: redis:${REDIS_VERION}
+    image: redis:${REDIS_VERSION}
     command:
     - --loglevel warning
     volumes:
