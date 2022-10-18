@@ -58,3 +58,10 @@ volumes:
 ```
 docker-compose up -d 
 ```
+
+## Schritt 4:
+
+```
+# use same network to debug 
+docker run --network wp_default -it --name alpinechecker alpine
+```
