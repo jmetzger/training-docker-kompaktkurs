@@ -49,6 +49,7 @@
   1. Docker-Daten persistent machen / Shared Volumes 
      * [Überblick](storage-overview.md) 
      * [Volumes](storage-volumes.md) 
+     * [bind-mounts](docker-bind-mount.md)
   
   1. Docker-Netzwerk 
      * [Netzwerk](network.md)
