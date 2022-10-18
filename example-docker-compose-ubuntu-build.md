@@ -28,7 +28,19 @@ cd myubuntu
 ```
 
 ```
-# nano hello.sh
+nano hello.sh
+```
+
+```
+#!/bin/bash
+let i=0
+
+while true
+do
+  let i=i+1
+  echo $i:hello-docker
+  sleep 5
+done
 
 ```
 
