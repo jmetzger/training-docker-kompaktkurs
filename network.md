@@ -1,6 +1,6 @@
 # Network 
 
-## Übersicht
+## 1. Übersicht
 
 ```
 3 Typen 
@@ -15,7 +15,7 @@ o overlay (needed for multi-node)
 ```
 
 
-## Kommandos 
+## 2. Kommandos 
 
 ```
 # Netzwerk anzeigen 
@@ -30,7 +30,7 @@ docker inspect ubuntu-container
 
 ```
 
-## Test mit eigenem Netz  
+## 3. Test mit eigenem Netz (bridged) 
 
 ### Schritt 1: Netzwerk erstellen 
 
@@ -75,6 +75,29 @@ docker exec -it alpine4 ash
 # dort gibt es keine Namensauflösung 
 /# ping alpine3
 /# ping <ip-address-alpine3>
+```
+
+
+## 4. Test mit Host-Netz 
+
+```
+# start first container 
+docker run --network host -d nginx 
+# will bind to port 80  
+lsof -i 
+# start second container 
+docker run --network host -d nginx 
+# Will run only the first
+docker container ls -a 
+
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS     NAMES
+acaffd1c8ac9   nginx     "/docker-entrypoint.…"   2 minutes ago    Exited (1) 2 minutes ago             priceless_kapitsa
+476a52395eb9   nginx     "/docker-entrypoint.…"   2 minutes ago    Up 2 minutes                         focused_buck
+
+docker rm -f ac 47 
+
+# und jetzt ist der Server von aussen erreichbar 
+
 ```
 
 
