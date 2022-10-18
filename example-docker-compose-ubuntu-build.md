@@ -28,10 +28,18 @@ cd myubuntu
 ```
 
 ```
+# nano hello.sh
+
+```
+
+```
 # nano Dockerfile 
 FROM ubuntu:latest
 RUN apt-get update; apt-get install -y inetutils-ping
-CMD ["/bin/bash"]
+COPY hello.sh .
+RUN chmod u+x hello.sh
+CMD ["/hello.sh"]
+
 ```
 
 ## Schritt 4: 
