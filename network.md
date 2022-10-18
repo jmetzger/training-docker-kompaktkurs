@@ -67,6 +67,7 @@ docker exec -it alpine3 ash
 ```
 docker run -dit --name alpine4 alpine ash 
 docker network connect app_net alpine4 
+docker inspect alpine4
 
 docker exec -it alpine4 ash 
 /# ping alpine1
