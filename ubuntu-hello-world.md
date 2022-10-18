@@ -19,7 +19,7 @@ RUN chmod u+x hello.sh
 CMD ["/hello.sh"]
 ```
 
-### Schritt 3:
+### Schritt 2:
 ```
 nano hello.sh 
 ```
