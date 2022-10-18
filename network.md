@@ -50,13 +50,13 @@ docker run -dit --name alpine3 alpine ash
 # ip rausfinden 
 docker inspect alpine3 | grep -i ipaddress 
 
-docker exec -it alpine1 
+docker exec -it alpine1 ash
 / # ping -c2 alpine2 
 / # ping -c2 alpine3 
 / # ping -c2 <ip-addr>
 / # exit
 
-docker exec -it alpine3
+docker exec -it alpine3 ash
 / # ping -c2 alpine1 
 / # ping -c2 <ip-addresse>
 
