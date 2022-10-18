@@ -62,6 +62,19 @@ docker exec -it alpine3 ash
 
 ```
 
+### Schritt 3: Test von container mit 2 Netzwerken 
+
+```
+docker run -dit --name alpine4 alpine ash 
+docker network connect app_net alpine4 
+
+docker exec -it alpine4 ash 
+/# ping alpine1
+/# ping alpine3
+/# ping <ip-address-alpine3>
+```
+
+
 
 ## Eigenes Netz erstellen 
 
