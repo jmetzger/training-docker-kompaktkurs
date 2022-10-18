@@ -10,9 +10,15 @@ mkdir nginx-test
 cd nginx-test
 mkdir html
 cd html/
-# vi index.html
-Text, den du rein haben möchtest 
+nano index.html
+```
 
+```
+# Text reinschreiben und speichern 
+Text, den du rein haben möchtest 
+```
+
+```
 cd ..
 vi Dockerfile 
 
@@ -31,14 +37,15 @@ docker images
 ```
 
 # eventually you are not logged in 
-docker login 
+# docker login 
+# DURCH euren Namen ersetzen -> jm1 
 docker push dockertrainereu/jm1-hello-web 
 #aus spass geloescht
 docker rmi dockertrainereu/jm1-hello-web
 
 ```
 
-## Schritt 3: dokcer laufen lassen
+## Schritt 3: docker laufen lassen
 
 ```
 # und direkt aus der Registry wieder runterladen 
@@ -54,5 +61,6 @@ curl http://localhost:8080
 
 # 
 docker rm -f hello-web 
+docker rmi dockertrainereu/jm1-hello-web 
 
 ```
