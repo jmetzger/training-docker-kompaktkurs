@@ -46,7 +46,7 @@ docker images
 docker run dockertrainereu/<dein-name>-hello-docker 
 ```
 
-## Schritt 4: hochladen 
+### Schritt 4: hochladen 
 
 ```
 docker login
