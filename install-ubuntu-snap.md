@@ -5,6 +5,14 @@
 ```
 sudo su -
 snap install docker
+
+## Attention: if you want to use bind-mount to access directories
+## all over the place, you need to install it differently 
+## See:
+## https://snapcraft.io/docs/install-modes
+snap install --devmode docker 
+
+
 ```
 
 ## Step 2: Validate if service is running and enabled ? 
