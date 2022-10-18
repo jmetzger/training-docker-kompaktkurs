@@ -71,6 +71,8 @@ docker inspect alpine4
 
 docker exec -it alpine4 ash 
 /# ping alpine1
+# alpine3 lässt soch nicht mit Namen anpingen, weil mit der der default -> bridge verbunden
+# dort gibt es keine Namensauflösung 
 /# ping alpine3
 /# ping <ip-address-alpine3>
 ```
