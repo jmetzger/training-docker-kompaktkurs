@@ -101,6 +101,22 @@ docker rm -f ac 47
 ```
 
 
+## 5. Port nach aussen (ausserhalb des Server) zur Verfügung stellen 
+
+```
+# bridged netzwerk wird aufgebaut.
+# und auf server wird der port 80 geöffnet 
+docker run --name nginx_extern -p 80:80 -d nginx 
+docker run --name nginx_extern8080 -p 8080:80 -d nginx 
+
+# Entweder browser (d.h. auf remote desktop) oder curl / wget 
+# nginx muss antworten 
+wget -O - http://localhost:8080
+wget -O - http://localhost:80
+
+```
+
+
 
 ## Eigenes Netz erstellen 
 
