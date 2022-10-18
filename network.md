@@ -30,6 +30,39 @@ docker inspect ubuntu-container
 
 ```
 
+## Test mit eigenem Netz  
+
+### Schritt 1: Netzwerk erstellen 
+
+```
+docker network create -d bridge app_net 
+docker inspect app_net 
+```
+
+
+### Schritt 2: Netzwerk testen  
+
+```
+docker run -dit --name alpine1 --network app_net alpine ash  
+docker run -dit --name alpine2 --network app_net alpine ash
+docker run -dit --name alpine3 alpine ash 
+
+# ip rausfinden 
+docker inspect alpine3 | grep -i ipaddress 
+
+docker exec -it alpine1 
+/ # ping -c2 alpine2 
+/ # ping -c2 alpine3 
+/ # ping -c2 <ip-addr>
+/ # exit
+
+docker exec -it alpine3
+/ # ping -c2 alpine1 
+/ # ping -c2 <ip-addresse>
+
+```
+
+
 ## Eigenes Netz erstellen 
 
 ```
