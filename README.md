@@ -76,7 +76,12 @@
      * [IP - Adresse abfragen](ip-a.md)
      * [Hostname setzen](hostname.md)
      * [Läuft der ssh-server](ssh-running.md)
-  
+
+  1. VirtualBox Tipps & Tricks 
+     * [VirtualBox 6.1. - Ubuntu für Kubernetes aufsetzen ](training-kubernetes-docker/blob/main/virtualbox-ubuntu.md)
+     * [VirtualBox 6.1. - Shared folder aktivieren](virtualbox-shared-folders.md)
+
+
 ## Backlog 
 
   1. Linux und Docker Tipps & Tricks allgemein 
