@@ -36,15 +36,17 @@ do
 done
 ```
 
-### Schritt 4:
+### Schritt 3:
 
 ```
 # dockertrainereu/<dein-name>-hello-docker . 
 # Beispiel
-docker build -t dockertrainereu/jm-hello-docker .
+docker build -t dockertrainereu/jm1810-hello-docker .
 docker images
 docker run dockertrainereu/<dein-name>-hello-docker 
 ```
+
+## Schritt 4: hochladen 
 
 ```
 docker login
@@ -53,7 +55,8 @@ pass: --bekommt ihr vom trainer--
 
 # docker push dockertrainereu/<dein-name>-hello-docker 
 # z.B. 
-docker push dockertrainereu/jm-hello-docker
+# docker push registry.domain.de/markusg/jm1810-hello-docker
+docker push dockertrainereu/jm1810-hello-docker
 
 # und wir schauen online, ob wir das dort finden
 
