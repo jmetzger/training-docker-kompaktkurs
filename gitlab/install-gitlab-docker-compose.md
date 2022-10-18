@@ -1,6 +1,6 @@
 # Install gitlab with docker-compose
 
-## Example (stripped) 
+## Walkthrough (with smtp) 
 
 ```
 mkdir -p /srv/gitlab 
@@ -98,6 +98,7 @@ services:
       interval: 10s
       retries: 10
     environment:
+      POSTGRES_USER: "${POSTGRE_USR}"
       POSTGRES_PASSWORD: "${POSTGRE_PWD}"
       POSTGRES_DB: gitlab
     volumes:
@@ -204,3 +205,5 @@ services:
 
 
 ## Reference: 
+
+  * https://docs.gitlab.com/ee/install/docker.html#install-gitlab-using-docker-compose
