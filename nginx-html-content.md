@@ -25,7 +25,9 @@ nano Dockerfile
 ```
 FROM nginx:latest
 COPY html /usr/share/nginx/html
+```
 
+```
 # nameskürzel z.B. jm1 
 docker build -t dockertrainereu/jm1-hello-web . 
 docker images
