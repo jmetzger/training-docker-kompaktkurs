@@ -43,7 +43,7 @@ done
 # Beispiel
 docker build -t dockertrainereu/jm1810-hello-docker .
 docker images
-docker run dockertrainereu/<dein-name>-hello-docker 
+docker run -d dockertrainereu/<dein-name>-hello-docker 
 ```
 
 ### Schritt 4: hochladen 
