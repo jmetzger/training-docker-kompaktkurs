@@ -6,15 +6,14 @@
 bind-mount  # not recommended 
 volumes
 tmpfs 
+nfs-mounts
 ```
 
-## Disadvantags 
+## Disadvantages 
 
 ```
-stored only on one node
+stored only on one node (besides nfs)
 Does not work well in cluster
-
-
 ```
 
 ## Alternative for cluster 
