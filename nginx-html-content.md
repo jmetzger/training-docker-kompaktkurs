@@ -20,8 +20,9 @@ Text, den du rein haben möchtest
 
 ```
 cd ..
-vi Dockerfile 
-
+nano Dockerfile 
+```
+```
 FROM nginx:latest
 COPY html /usr/share/nginx/html
 
