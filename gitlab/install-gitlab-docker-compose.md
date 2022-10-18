@@ -18,7 +18,7 @@ GITLAB_HOME=/srv/gitlab
 POSTGRE_USR=project 
 POSTGRE_PWD=mypass
 REDIS_VERSION=7.0.5
-GITLAB_VERSION=gitlab-ce
+GITLAB_VERSION=gitlab-ce:15.4.2-ce.0
 ```
 
 ```
