@@ -1,6 +1,6 @@
 # Install gitlab with docker-compose
 
-## Walkthrough (with smtp) 
+## Walkthrough (without smtp) 
 
 ```
 mkdir -p /srv/gitlab 
@@ -55,7 +55,7 @@ services:
         condition: service_started
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://${HOSTNAME}'
+        external_url 'http://${HOSTNAME}'
         nginx['proxy_set_headers'] = {
           "X-Forwarded-Proto" => "https",
           "X-Forwarded-Ssl" => "on"
