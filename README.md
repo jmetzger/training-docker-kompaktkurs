@@ -66,6 +66,9 @@
   1. Docker Swarm 
      * [Docker Swarm Beispiele](docker-swarm-examples.md)
 
+  1. Docker Registry
+     * [Privater Registry Server](private-registry-server.md)
+
   1. Docker - Dokumentation 
      * [Vulnerability Scanner with docker](https://docs.docker.com/engine/scan/#prerequisites)
      * [Vulnerability Scanner mit snyk](https://snyk.io/plans/)
