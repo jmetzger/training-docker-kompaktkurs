@@ -17,8 +17,12 @@
 ```
 # Daten erstellt 
 docker volume create testdata 
+
+# Datenbefüllung simulieren 
 docker run -it -v testdata:/testdata ubuntu cp -a /etc /testdata
-docker run --rm -v /backups/volumes:/backup -v testdata:/data:ro  debian:stretch-slim bash -c "cd /data && /bin/tar -czvf /backup/test-data.tar.gz ."
+
+# Sichern 
+docker run --rm -v /backups/volumes:/backup -v testdata:/data:ro  debian:stretch-slim bash -c "cd /data && /bin/tar -czvf /backup/test-data.tar.gz  ."
 cd /backups/volumes 
 ls -la 
 # hier dann test-data.tar.gz 
