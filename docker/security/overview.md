@@ -11,6 +11,12 @@ docker run -it -u kurs alpine
 
 ```
 
+## Default capabilities 
+
+  * Set everytime a new container is started as default 
+  * https://github.com/moby/moby/blob/master/profiles/seccomp/default.json
+
+
 
 
 ## Reference:
