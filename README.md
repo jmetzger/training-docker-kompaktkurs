@@ -46,7 +46,6 @@
   1. Container-Image bei Laufzeit konfigurieren 
      * [Container-Image bei Laufzeit konfigurieren](container-env.md)
   
-  
   1. Docker-Daten persistent machen / Shared Volumes 
      * [Überblick](storage-overview.md) 
      * [Volumes](storage-volumes.md) 
@@ -81,6 +80,10 @@
   1. VirtualBox Tipps & Tricks 
      * [VirtualBox 6.1. - Ubuntu - Entwicklungsserver für Docker aufsetzen ](virtualbox-ubuntu.md)
      * [VirtualBox 6.1. - Shared folder aktivieren](virtualbox-shared-folders.md)
+
+  1. Kubernetes - Überblick
+     * [Warum Kubernetes, was macht Kubernetes](warum-kubernetes.md) 
+     * [Aufbau Allgemein](/kubernetes/architecture.md)
 
 
 ## Backlog 
