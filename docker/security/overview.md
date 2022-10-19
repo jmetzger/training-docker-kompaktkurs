@@ -31,17 +31,19 @@ nano docker-compose.yml
 
 ```
 services: 
-  alpine1:
-    image: alpine 
+  nginx:
+    image: nginx 
     cap_drop:
-      - CHMOD 
       - CHOWN
 ```
 
 ```
-docker compose up .d 
-docker exec -it captest_alpine1_1 ash
-/ # touch /tmp/foo && chmod o=rwx /tmp/foo 
+docker compose up -d
+# start and exits 
+docker compose ps 
+# what happened -> wants to do chown, but it is not allowed 
+docker logs captest_nginx_1 
+o=rwx /tmp/foo 
 ```
 
 ```
