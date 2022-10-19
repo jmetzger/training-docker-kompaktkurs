@@ -111,8 +111,113 @@ docker compose up -d
 docker compose ps 
 ```
 
+## Example (with jwilder/nginx-proxy) 
 
-## Example (Full)
+```
+#.env file same as before 
+```
+
+```
+#nano docker-compose.yaml
+version: '3.9'
+services:
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  whoami:
+    image: jwilder/whoami
+    environment:
+      - VIRTUAL_HOST=whoami.local,whoami.training.local
+
+  redis:
+    restart: always
+    image: redis:${REDIS_VERSION}
+    command:
+    - --loglevel warning
+    volumes:
+    - ${GITLAB_HOME}/redis-data:/data
+
+  web:
+    image: 'gitlab/${GITLAB_VERSION}'
+    restart: unless-stopped
+    hostname: '${HOSTNAME}'
+    healthcheck:
+      test: ["CMD", "/opt/gitlab/bin/gitlab-healthcheck"]
+      interval: 5m
+      timeout: 10s
+      retries: 3
+      start_period: 5m
+      
+#    ports:
+#       - '80:80'
+#      - '443:443'
+#      - '2222:22'
+    depends_on:
+      database:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    environment:
+      VIRTUAL_HOST: gitlab.training.local
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://${HOSTNAME}'
+        letsencrypt['enabled'] = false
+        nginx['listen_https'] = false
+        nginx['listen_port'] = 80
+
+        gitlab_rails['time_zone'] = 'UTC'
+        redis['enable'] = true
+        gitlab_rails['redis_host'] = "redis"
+        gitlab_rails['redis_port'] = 6379
+        gitlab_rails['db_adapter'] = "postgresql"
+        gitlab_rails['db_database'] = "gitlab"
+        gitlab_rails['db_username'] = "${POSTGRE_USR}"
+        gitlab_rails['db_password'] = "${POSTGRE_PWD}"
+        gitlab_rails['db_host'] = "database"
+        registry['enable'] = false
+        gitlab_rails['backup_archive_permissions'] = 0644
+        gitlab_rails['backup_keep_time'] = 1468800
+
+  volumes:
+      - ${GITLAB_HOME}/gitlab-ee-data_conf:/etc/gitlab
+      - ${GITLAB_HOME}/gitlab-ee-data_logs:/var/log/gitlab
+      - ${GITLAB_HOME}/gitlab-ee-data_data:/var/opt/gitlab
+    shm_size: '256m'
+
+  runner_01:
+    image: gitlab/gitlab-runner:alpine
+    restart: always
+    depends_on:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${GITLAB_HOME}/gitlab_runner_01_settings:/etc/gitlab-runner
+      - ${GITLAB_HOME}/gitlab_runner_01_data:/home/gitlab-runner
+
+  database:
+    image: postgres:12-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "postgres", "-U", "project"]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    environment:
+      POSTGRES_USER: "${POSTGRE_USR}"
+      POSTGRES_PASSWORD: "${POSTGRE_PWD}"
+      POSTGRES_DB: gitlab
+    volumes:
+      - ${GITLAB_HOME}/gitlab-ee-data_db:/var/lib/postgresql/data
+
+```
+
+
+## Example (Full Original)
 
 ```
 version: '3.9'
