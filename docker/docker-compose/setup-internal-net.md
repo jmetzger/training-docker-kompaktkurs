@@ -4,12 +4,29 @@
 
   * When containers are in an internal net, they are not able to reach the outside world (aka internet) 
 
-## Setup / Walkthrough 
+## Schritt 1: Setup / Walkthrough 
 
 ```
+cd 
 mkdir internal
 cd internal/
 nano docker-compose.yml
+```
+
+```
+services:
+   partner1:
+     image: nginx
+     networks:
+       - private
+   partner2:
+     image: nginx
+     networks:
+       - private
+
+networks:
+  private:
+    internal: true
 ```
 
 ```
