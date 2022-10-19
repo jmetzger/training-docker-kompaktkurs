@@ -106,7 +106,10 @@ services:
       - ${GITLAB_HOME}/gitlab-ee-data_db:/var/lib/postgresql/data
 ```
 
-
+```
+docker compose up -d 
+docker compose ps 
+```
 
 
 ## Example (Full)
