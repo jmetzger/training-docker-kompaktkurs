@@ -101,7 +101,3 @@
      * [YAML Linter Online](http://www.yamllint.com/)
      * [Basis/Parent - Image erstellen](docker-base-image.md)
      * [Eigenes unsichere Registry-Verwenden. ohne https](insecure-registry.md)
-
-  1. VirtualBox Tipps & Tricks 
-     * [VirtualBox 6.1. - Ubuntu für Kubernetes aufsetzen ](training-kubernetes-docker/blob/main/virtualbox-ubuntu.md)
-     * [VirtualBox 6.1. - Shared folder aktivieren](virtualbox-shared-folders.md)
