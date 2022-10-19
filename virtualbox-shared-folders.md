@@ -30,7 +30,8 @@ Ordner-Name: linux
 checkbox nicht ausgewählt bei : automatisch einbinden, nur lesbar
 checkbox ausgewählt bei: Permanent erzeugen
 
-Dann rebooten
+# aus meiner Sicht nicht notwendig zu rebooten 
+## Dann rebooten
 
 In der virtuellen Maschine:  
 sudo su -
@@ -39,7 +40,6 @@ mkdir /linux
 mount -t vboxsf linux /linux 
 
 # Optional, falls du nicht zugreifen kannst:
-sudo usermod -aG vboxsf root 
 sudo usermod -aG vboxsf <your-user>
 
 
