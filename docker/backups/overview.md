@@ -12,7 +12,7 @@
   * Sicherungstools 
   * Sinnvoll generell wenn diese zur Verfügung stehen. 
 
-## Walkthrough 
+## Walkthrough (backup) 
 
 ```
 # Daten erstellt 
@@ -29,6 +29,14 @@ ls -la
 
 ```
 
+## Walkthrough (Restore) 
+
+```
+docker run --rm \
+        -v /backups/volumes:/backup \
+        -v testdata:/data \
+        debian:stretch-slim bash -c "cd /data && /bin/tar -xzvf /backup/test-data.tar.gz"
+```
 
 ## Reference 
 
