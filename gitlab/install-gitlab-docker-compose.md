@@ -14,6 +14,7 @@ cd gitlab
 
 ```
 # nano .env 
+HOSTNAME=gitlab.training.local
 GITLAB_HOME=/srv/gitlab
 POSTGRE_USR=project 
 POSTGRE_PWD=mypass
