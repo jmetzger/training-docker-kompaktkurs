@@ -12,7 +12,7 @@
   * Sicherungstools 
   * Sinnvoll generell wenn diese zur Verfügung stehen. 
 
-## Walktrhrough 
+## Walkthrough 
 
 ```
 # Daten erstellt 
