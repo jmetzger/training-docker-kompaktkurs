@@ -9,9 +9,9 @@ Walkthrough
 # Menu -> Geräte -> Gasterweiterung einlegen 
 
 # In the console do a 
-sudo mkdir /mnt/platte
+sudo mkdir -p /mnt/platte
 sudo mount /dev/cdrom /mnt/platte
-cd /mnt/plattte
+cd /mnt/platte
 sudo apt-get install -y build-essential linux-headers-`uname -r`
 sudo ./VBoxLinuxAdditions.run 
 
