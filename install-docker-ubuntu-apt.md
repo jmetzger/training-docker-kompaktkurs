@@ -20,3 +20,16 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+
+## Läuft der Dienst (dockerd) 
+
+```
+systemctl status docker 
+```
+
+## docker-compose ? 
+
+```
+# herausfinden, ob docker compose installieren 
+docker compose version 
+```
