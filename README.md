@@ -68,6 +68,9 @@
 
   1. Docker Registry
      * [Privater Registry Server](private-registry-server.md)
+     
+  1. Docker Reverse Proxy (vorgeschaltet) 
+     * [Docker mit Reverse Proxy verwenden](/docker/docker-compose/nginx-proxy.md)
 
   1. Docker - Dokumentation 
      * [Vulnerability Scanner with docker](https://docs.docker.com/engine/scan/#prerequisites)
