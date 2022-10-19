@@ -53,6 +53,7 @@
   
   1. Docker-Netzwerk 
      * [Netzwerk](network.md)
+     * [Internes Netz ohne Internetzugang aufsetzen](docker/docker-compose/setup-internal-net.md)
   
   1. Docker Compose
      * [yaml-format](yaml-format.md)
