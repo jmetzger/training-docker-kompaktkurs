@@ -17,8 +17,39 @@ docker run -it -u kurs alpine
   * https://github.com/moby/moby/blob/master/profiles/seccomp/default.json
 
 
+## Run container with less capabilities 
+
+```
+cd
+mkdir captest
+cd captest 
+```
+
+```
+nano docker-compose.yml 
+```
+
+```
+services: 
+  alpine1:
+    image: alpine 
+    cap_drop:
+      - CHMOD 
+      - CHOWN
+```
+
+```
+docker compose up .d 
+docker exec -it captest_alpine1_1 ash
+/ # touch /tmp/foo && chmod o=rwx /tmp/foo 
+```
+
+```
+docker compose down 
+```
 
 
 ## Reference:
 
   * https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html
+  * man capabilities
