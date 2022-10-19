@@ -38,7 +38,7 @@ docker exec -it internal-partner1-1 bash
 / # apt update
 ```
 
-## Connect to the outside world 
+## Schritt 2: Connect to the outside world 
 
 ```
 docker network create -d bridge app-public
