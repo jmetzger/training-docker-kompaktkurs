@@ -1,6 +1,10 @@
 # Proxy für Docker setzen 
 
-## Walktrough
+## Für docker über repo installiert 
+
+  * https://www.baeldung.com/ops/docker-setting-proxy
+
+## Walktrough (snap -> docker)
 
 ```
 # as root
