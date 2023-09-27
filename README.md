@@ -31,8 +31,7 @@
   
   1. Docker - Szenarien 
      * [Verbindung zu nginx mit anderem Container testen](nginx-busybox-connection-test.md) 
-  
-  
+
   1. Dockerfile - Examples 
      * [Ubuntu mit hello world](ubuntu-hello-world.md)
      * [Ubuntu mit ping](ubuntu-ping.md) 
@@ -59,7 +58,7 @@
      * [yaml-format](yaml-format.md)
      * [Ist docker-compose installiert?](docker-compose-installed.md) 
      * [Example with Wordpress / MySQL](example-wordpress-mysql.md)
-     * [Example with Wordpress / Nginx / MariadB](example-wnm-docker-compose.md)
+     * [Example with Wordpress / Nginx / MySQL](example-wnm-docker-compose.md)
      * [Example with Ubuntu and Dockerfile](example-docker-compose-ubuntu-build.md)
      * [Logs in docker - compose](docker-compose-logs.md)
      * [docker-compose und replicas](docker-compose-replicas.md)
