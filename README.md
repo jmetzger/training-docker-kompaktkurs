@@ -13,6 +13,7 @@
      * [Installation Docker unter Ubuntu mit snap](install-ubuntu-snap.md)
      * [Installation Docker unter SLES 15](install-sles15-zypper.md)
      * [Installation Docker unter Ubuntu mit Docker Repo](install-docker-ubuntu-apt.md)
+     * [Installation Docker unter RHEL/Rocky mit Docker Repo](install-docker-rhel-dnf.md)
   
   1. Docker-Befehle 
      * [Docker Grundlagen run](docker-befehle.md)
