@@ -41,8 +41,11 @@ volumes:
     wordpress_plugins:
     wordpress_themes:
     wordpress_uploads:
+```
 
 
+
+```
 ## now start the system
 docker compose up -d 
 ## we can do some test if db is reachable 
