@@ -62,9 +62,18 @@ cd ../
 # wichtig, im docker-compose - Ordner seiend 
 #pwd 
 #~/bautest
-docker-compose up -d 
+docker compose up -d 
 # wird image gebaut und container gestartet 
 
 # Bei Veränderung vom Dockerfile, muss man den Parameter --build mitangeben 
-docker-compose up -d --build 
+docker compose up -d --build 
+```
+
+## Schritt 5:
+
+```
+# Reinwechseln
+docker exec -it bautest-myubunu-1 bash
+ping wwww.google.de
+exit 
 ```
