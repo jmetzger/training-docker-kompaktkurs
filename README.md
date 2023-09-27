@@ -57,8 +57,7 @@
   1. Docker Compose
      * [yaml-format](yaml-format.md)
      * [Ist docker-compose installiert?](docker-compose-installed.md) 
-     * [Example with Wordpress / MySQL](example-wordpress-mysql.md)
-     * [Example with Wordpress / Nginx / MySQL](example-wnm-docker-compose.md)
+     * [Example with Wordpress / MySQL - Good !](example-wordpress-mysql.md)
      * [Example with Ubuntu and Dockerfile](example-docker-compose-ubuntu-build.md)
      * [Logs in docker - compose](docker-compose-logs.md)
      * [docker-compose und replicas](docker-compose-replicas.md)
