@@ -73,7 +73,7 @@ docker compose up -d --build
 
 ```
 # Reinwechseln
-docker exec -it bautest-myubunu-1 bash
-ping wwww.google.de
+docker exec -it bautest-myubuntu-1 bash
+ping www.google.de
 exit 
 ```
