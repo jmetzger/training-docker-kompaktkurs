@@ -51,7 +51,8 @@ volumes:
 ## Schritt 3:
 
 ```
-docker-compose up -d 
+
+docker compose up -d 
 ```
 
 ## Schritt 4:
